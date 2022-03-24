@@ -2,7 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Giuseppe Rizzi`,
+    title: `Computer Science Wiki`,
     description: `A Computer Science Wiki`,
     author: `Giuseppe Rizzi`,
     siteUrl: `https://grizzi.github.io`, // No trailing slash allowed.
@@ -65,8 +65,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Giuseppe Rizzi`,
-        short_name: `Giuseppe Rizzi`,
+        name: `Computer Science Wiki`,
+        short_name: `Computer Science Wiki`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,

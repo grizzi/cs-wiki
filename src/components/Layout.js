@@ -121,9 +121,6 @@ export default function Layout({ children }) {
           >
             <MenuLink to="/">About Me</MenuLink>
             <MenuLink to="/blog/">Blog</MenuLink>
-            <MenuLink to="https://registry.jsonresume.org/ArnaudValensi">
-              Resume
-            </MenuLink>
             <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
