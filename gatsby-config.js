@@ -6,7 +6,6 @@ module.exports = {
     description: `A Computer Science Wiki`,
     author: `Giuseppe Rizzi`,
     siteUrl: `https://grizzi.github.io`, // No trailing slash allowed.
-    social: {},
   },
   plugins: [
     {
