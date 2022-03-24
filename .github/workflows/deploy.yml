@@ -20,9 +20,9 @@ jobs:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_ROOT_PAGE_ID: ${{ secrets.NOTION_ROOT_PAGE_ID }}
         run: |
-          yarn install
-          yarn import-notion-posts
-          yarn build
+          npm install
+          npm run import-notion-posts
+          npm build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
