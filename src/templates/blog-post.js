@@ -83,7 +83,7 @@ export default function BlogPost({ data, pageContext, location }) {
         </div>
       </nav>
       <Utterances
-        repo="ArnaudValensi/arnaudvalensi-comments"
+        repo="grizzi/cs-wiki-comments"
         issueTerm="pathname"
         theme="github-light"
         crossorigin="anonymous"

@@ -1,7 +1,7 @@
 {
-  "name": "arnaud-valensi-blog",
+  "name": "giuseppe-rizzi-cs-wiki",
   "private": true,
-  "description": "Arnaud Valensi's blog",
+  "description": "A Computer Science Wiki",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -55,6 +55,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArnaudValensi/blog"
+    "url": "https://github.com/grizzi"
   }
 }
