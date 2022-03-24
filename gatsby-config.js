@@ -2,13 +2,11 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Arnaud Valensi`,
-    description: `Arnaud Valensi's personal blog`,
-    author: `Arnaud Valensi`,
-    siteUrl: `https://arnaudvalensi.github.io`, // No trailing slash allowed.
-    social: {
-      twitter: `ArnaudValensi`,
-    },
+    title: `Giuseppe Rizzi`,
+    description: `A Computer Science Wiki`,
+    author: `Giuseppe Rizzi`,
+    siteUrl: `https://grizzi.github.io`, // No trailing slash allowed.
+    social: {},
   },
   plugins: [
     {
@@ -65,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Arnaud Valensi`,
-        short_name: `Arnaud Valensi`,
+        name: `Giuseppe Rizzi`,
+        short_name: `Giuseppe Rizzi`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffa7c4`,
