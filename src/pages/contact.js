@@ -8,7 +8,7 @@ export default function Contact({ location }) {
     <Layout>
       <SEO
         title="Social information"
-        description="Arnaud Valensi's social networks details"
+        description="Giuseppe Rizzi's social networks details"
         pathname={location.pathname}
       />
       <main
@@ -18,7 +18,7 @@ export default function Contact({ location }) {
       >
         <p>
           <a
-            href="mailto:arnaud.valensi@gmail.com"
+            href="mailto:giuseppe.rizzi10@gmail.com"
             target="_blank"
             rel="noreferrer"
           >
@@ -26,30 +26,17 @@ export default function Contact({ location }) {
           </a>
         </p>
         <p>
-          <a
-            href="https://github.com/ArnaudValensi"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://github.com/grizzi" target="_blank" rel="noreferrer">
             GitHub
           </a>
         </p>
         <p>
           <a
-            href="https://www.linkedin.com/in/arnaud-valensi-04080084/"
+            href="https://www.linkedin.com/in/giuseppe-rizzi-a999a6133"
             target="_blank"
             rel="noreferrer"
           >
             LinkedIn
-          </a>
-        </p>
-        <p>
-          <a
-            href="https://twitter.com/ArnaudValensi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Twitter
           </a>
         </p>
       </main>

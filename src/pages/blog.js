@@ -9,8 +9,8 @@ export default function Blog({ data, location }) {
   return (
     <Layout>
       <SEO
-        title="Blog"
-        description="All the blog posts from Arnaud Valensi"
+        title="WiKi"
+        description="All the chapter of Computer Science WiKi"
         pathname={location.pathname}
       />
       <main>
