@@ -42,7 +42,11 @@ async function downloadFile(url, destinationFolder) {
 
 function toTextString(text) {
   return text.reduce((result, textItem) => {
+    if (textItem.type === "equation") {
+      return `<img src="https://render.githubusercontent.com/render/math?math=${textItem.equation.expression}"></img>`
+    }
     if (textItem.type !== "text") {
+      console.log("ERROR", JSON.stringify(textItem, null, 2))
       console.log(`=================> not a 'text' type: ${textItem.type}`)
       process.exit(1)
     }
@@ -113,10 +117,37 @@ async function processBlocks(pageContent, textPrefix = "") {
         block.code.text
       )}\n\`\`\`\n\n`
     } else if (block.type === "video") {
-      text = `${text}\`video: ${block.video.external.url}\`\n\n`
+      if (block.video.type === "external") {
+        text = `${text}\`video: ${block.video.external.url}\`\n\n`
+      } else if (block.video.type === "file") {
+        text = `${text}\`video: ${block.video.file.url}\`\n\n`
+      } else {
+        console.log(
+          "=====> Failed to handle video block: ",
+          JSON.stringify(block, null, 2)
+        )
+      }
     } else if (block.type === "image") {
-      image_name = await downloadFile(block.image.external.url, destPath)
-      text = `${text}${textPrefix}![${image_name}](${image_name})\n\n`
+      console.log(
+        "=====> Failed to handle image block: ",
+        JSON.stringify(block, null, 2)
+      )
+      let image_name = ""
+      let caption = ""
+      if (block.image.type === "external") {
+        image_name = await downloadFile(block.image.external.url, destPath)
+      } else if (block.image.type === "file") {
+        image_name = await downloadFile(block.image.file.url, destPath)
+      } else {
+        console.log(
+          "=====> Failed to handle image block: ",
+          JSON.stringify(block, null, 2)
+        )
+      }
+      // if (block.image.caption.length > 0) {
+      //   caption = toTextString(block.image.caption)
+      // }
+      text = `${text}${textPrefix}![${image_name}](${image_name})\n*${caption}*\n\n`
     } else if (block.type === "divider") {
       text = `${text}---\n`
     } else {

@@ -63,7 +63,7 @@ export default function Layout({ children }) {
         color: var(--textNormal);
         padding: ${rhythm(2)} ${rhythm(1)};
         margin: 0 auto;
-        max-width: 680px;
+        max-width: 80%;
         transition: "color 2s ease-out, background 2s ease-out";
       `}
     >
