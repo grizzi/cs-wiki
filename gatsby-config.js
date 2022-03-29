@@ -1,6 +1,7 @@
 const path = require(`path`)
 
 module.exports = {
+  pathPrefix: "/cs-wiki",
   siteMetadata: {
     title: `Computer Science Wiki`,
     description: `A Computer Science Wiki`,
