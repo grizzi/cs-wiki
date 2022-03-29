@@ -43,7 +43,13 @@ export default function Blog({ data, location }) {
               </Link>
               <small>{node.frontmatter.date}</small>
             </header>
-            <p>{node.frontmatter.description}</p>
+            <p
+              css={css`
+                display: inline-block;
+              `}
+            >
+              {node.frontmatter.description}
+            </p>
           </article>
         ))}
       </main>

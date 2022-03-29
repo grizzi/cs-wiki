@@ -5,6 +5,7 @@ const rimraf = require("rimraf")
 const fs = require("fs")
 const fetch = require("node-fetch")
 const crypto = require("crypto")
+const { NotionToMarkdown } = require("notion-to-md")
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN
 const NOTION_ROOT_PAGE_ID = process.env.NOTION_ROOT_PAGE_ID
@@ -20,6 +21,9 @@ const markdownPages = {}
 const notion = new Client({
   auth: NOTION_TOKEN,
 })
+
+// passing notion client to the option
+const n2m = new NotionToMarkdown({ notionClient: notion })
 
 const regexMeta = /^== *(\w+) *:* (.+) *$/
 
@@ -43,7 +47,7 @@ async function downloadFile(url, destinationFolder) {
 function toTextString(text) {
   return text.reduce((result, textItem) => {
     if (textItem.type === "equation") {
-      return `<img src="https://render.githubusercontent.com/render/math?math=${textItem.equation.expression}"></img>`
+      return `${result}<img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?${textItem.equation.expression}"></img>`
     }
     if (textItem.type !== "text") {
       console.log("ERROR", JSON.stringify(textItem, null, 2))
@@ -89,14 +93,23 @@ async function processBlocks(pageContent, textPrefix = "") {
       }
 
       // Meta.
-      const match = block.paragraph.text[0].text.content.match(regexMeta)
-      if (match !== null) {
-        metas.push(`${match[1]}: '${match[2]}'`)
-        continue
+      try {
+        const match = block.paragraph.text[0].text.content.match(regexMeta)
+        if (match !== null) {
+          metas.push(`${match[1]}: '${match[2]}'`)
+          continue
+        }
+      } catch (e) {
+        console.log("Error processing meta", JSON.stringify(block.paragraph))
       }
 
       // Simple text.
       text = `${text}${textPrefix}${toTextString(block.paragraph.text)}\n\n`
+    } else if (
+      block.type === "heading_1" &&
+      block.heading_1.text.length !== 0
+    ) {
+      text = `${text}${textPrefix}### ${toTextString(block.heading_1.text)}\n\n`
     } else if (
       block.type === "heading_2" &&
       block.heading_2.text.length !== 0
@@ -113,6 +126,8 @@ async function processBlocks(pageContent, textPrefix = "") {
         block.bulleted_list_item.text
       )}\n`
     } else if (block.type === "code") {
+      block.code.language =
+        block.code.language === "c++" ? "cpp" : block.code.language
       text = `${text}${textPrefix}\`\`\`${block.code.language}\n${toTextString(
         block.code.text
       )}\n\`\`\`\n\n`
@@ -120,7 +135,8 @@ async function processBlocks(pageContent, textPrefix = "") {
       if (block.video.type === "external") {
         text = `${text}\`video: ${block.video.external.url}\`\n\n`
       } else if (block.video.type === "file") {
-        text = `${text}\`video: ${block.video.file.url}\`\n\n`
+        video_name = await downloadFile(block.video.file.url, destPath)
+        text = `${text}\`video: ${video_name}\`\n\n`
       } else {
         console.log(
           "=====> Failed to handle video block: ",
@@ -128,10 +144,6 @@ async function processBlocks(pageContent, textPrefix = "") {
         )
       }
     } else if (block.type === "image") {
-      console.log(
-        "=====> Failed to handle image block: ",
-        JSON.stringify(block, null, 2)
-      )
       let image_name = ""
       let caption = ""
       if (block.image.type === "external") {
@@ -144,12 +156,19 @@ async function processBlocks(pageContent, textPrefix = "") {
           JSON.stringify(block, null, 2)
         )
       }
-      // if (block.image.caption.length > 0) {
-      //   caption = toTextString(block.image.caption)
-      // }
-      text = `${text}${textPrefix}![${image_name}](${image_name})\n*${caption}*\n\n`
+      if (block.image.caption.length > 0) {
+        caption = toTextString(block.image.caption)
+        text = `${text}${textPrefix}![${image_name}](${image_name})\n<em>${caption}</em>\n\n`
+      } else {
+        text = `${text}${textPrefix}![${image_name}](${image_name})\n\n`
+      }
     } else if (block.type === "divider") {
       text = `${text}---\n`
+    } else if (block.type == "equation") {
+      text = `${text}${textPrefix}<div class=block-equation-container><img src="https://latex.codecogs.com/svg.latex?${block.equation.expression}"></img></div>\n\n`
+    } else if (block.type == "table") {
+      let table = await n2m.blockToMarkdown(block)
+      text = `${text}${textPrefix}${table}\n\n`
     } else {
       console.log("=====> Unhandled block: ", JSON.stringify(block, null, 2))
     }
