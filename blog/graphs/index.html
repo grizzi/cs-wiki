@@ -1,0 +1,655 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.44 'Fira Sans',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Fira Sans',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:2.15rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.58293rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1.35824rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.85805rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;color:hsla(0,0%,0%,1);font-family:'Patua One',sans-serif;font-weight:700;text-rendering:optimizeLegibility;font-size:0.79482rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}ul{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.44rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;font-size:0.85rem;line-height:1.44rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;font-size:1rem;line-height:1.44rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}blockquote{margin-left:0;margin-right:1.44rem;margin-top:0;padding-bottom:0;padding-left:1.17rem;padding-right:0;padding-top:0;margin-bottom:1.44rem;font-size:1.16543rem;line-height:1.44rem;color:inherit;opacity:0.8;font-style:italic;border-left:0.27rem solid;border-left-color:inherit;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.44rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.44rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.44rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.44rem;margin-bottom:calc(1.44rem / 2);margin-top:calc(1.44rem / 2);}li > ul{margin-left:1.44rem;margin-bottom:calc(1.44rem / 2);margin-top:calc(1.44rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.44rem / 2);}code{font-size:0.85rem;line-height:1.44rem;}kbd{font-size:0.85rem;line-height:1.44rem;}samp{font-size:0.85rem;line-height:1.44rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96rem;padding-right:0.96rem;padding-top:0.72rem;padding-bottom:calc(0.72rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}h1, h2, h3, h4, h5, h6{color:var(--textTitle);}a{color:var(--textLink);text-decoration:none;}a:hover{text-decoration:underline;text-decoration-color:var(--textLink);}blockquote > :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.44rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.08rem;margin-right:0;padding-left:0.81rem;}}</style><style data-href="/styles.17d96fda941150948490.css">body{--bg:#f8f8f2;--websiteTitle:#e06882;--textNormal:#282a36;--textTitle:#1a3f97;--menuLink:#e06882;--textLink:#1898d4;--inlineCode-bg:rgba(223,105,130,0.27058823529411763);--inlineCode-text:#1a1a1a;background-color:var(--bg);transition:color .2s ease-out,background .2s ease-out}body,body.dark{--code-bg:#333a4b}body.dark{-webkit-font-smoothing:antialiased;--bg:#232838;--websiteTitle:#dd8a9c;--textNormal:#f8f8f2;--textTitle:#f8d72c;--menuLink:#dd8a9c;--textLink:#8dd6f8;--inlineCode-bg:#333a4b;--inlineCode-text:#e6e6e6}:not(pre)>code[class*=language-]{background:var(--inlineCode-bg);color:var(--inlineCode-text)}pre[class*=language-]{background:var(--code-bg)}:not(pre)>code[class*=language-],pre[class*=language-]{-webkit-font-variant-ligatures:none;font-variant-ligatures:none;-webkit-font-feature-settings:normal;font-feature-settings:normal}p{display:inline-block}.block-equation-container{display:block;align-items:center;text-align:center}.inline-equation-image{vertical-align:middle;margin-bottom:0}@font-face{font-display:swap;font-family:Fira Sans;font-style:normal;font-weight:400;src:url(/static/fira-sans-v10-latin-regular-9720cc0c5575cb480360ff90655df31b.eot);src:local("Fira Sans Regular"),local("FiraSans-Regular"),url(/static/fira-sans-v10-latin-regular-9720cc0c5575cb480360ff90655df31b.eot?#iefix) format("embedded-opentype"),url(/static/fira-sans-v10-latin-regular-78773521b0ffe376bc7edd8ec2a591fb.woff2) format("woff2"),url(/static/fira-sans-v10-latin-regular-baa3b51e20ff84bf4964223288c0ba10.woff) format("woff"),url(/static/fira-sans-v10-latin-regular-ff33952a9f8385a840074521efbc8f38.ttf) format("truetype"),url(/static/fira-sans-v10-latin-regular-7307389c2218fa743b42f50e6452bee6.svg#FiraSans) format("svg")}@font-face{font-display:swap;font-family:Fira Sans;font-style:italic;font-weight:400;src:url(/static/fira-sans-v10-latin-italic-e5ca852f28b1971384c2820a1471a858.eot);src:local("Fira Sans Italic"),local("FiraSans-Italic"),url(/static/fira-sans-v10-latin-italic-e5ca852f28b1971384c2820a1471a858.eot?#iefix) format("embedded-opentype"),url(/static/fira-sans-v10-latin-italic-ee9f23730618d80fcb96905621eb5155.woff2) format("woff2"),url(/static/fira-sans-v10-latin-italic-cd0194f96a0385782a34f706d9475b9b.woff) format("woff"),url(/static/fira-sans-v10-latin-italic-2c48ec759f062c6d6c2495f65d766b56.ttf) format("truetype"),url(/static/fira-sans-v10-latin-italic-e391c8e818791fb2a2ae605f9634c383.svg#FiraSans) format("svg")}@font-face{font-display:swap;font-family:Fira Sans;font-style:normal;font-weight:700;src:url(/static/fira-sans-v10-latin-700-832c99425622b1dd326dc39dc4cbd963.eot);src:local("Fira Sans Bold"),local("FiraSans-Bold"),url(/static/fira-sans-v10-latin-700-832c99425622b1dd326dc39dc4cbd963.eot?#iefix) format("embedded-opentype"),url(/static/fira-sans-v10-latin-700-2ecb426f85ffc1c53b677556210e629f.woff2) format("woff2"),url(/static/fira-sans-v10-latin-700-4d2dfa0d7366eb8ba6e2d9cc5ef6e58d.woff) format("woff"),url(/static/fira-sans-v10-latin-700-603e6faf87382f3b7cf37ef81d64298f.ttf) format("truetype"),url(/static/fira-sans-v10-latin-700-e7cac841f261ca02458dc165de05a40e.svg#FiraSans) format("svg")}@font-face{font-display:swap;font-family:Fira Sans;font-style:italic;font-weight:700;src:url(/static/fira-sans-v10-latin-700italic-90e8b2a38c7767438e1f37d298a13f6f.eot);src:local("Fira Sans Bold Italic"),local("FiraSans-BoldItalic"),url(/static/fira-sans-v10-latin-700italic-90e8b2a38c7767438e1f37d298a13f6f.eot?#iefix) format("embedded-opentype"),url(/static/fira-sans-v10-latin-700italic-cfc0cbcef68f3ef1a8b0cbbca2bd4036.woff2) format("woff2"),url(/static/fira-sans-v10-latin-700italic-fc51c09ea9ba4597fa5ad6690a42ad96.woff) format("woff"),url(/static/fira-sans-v10-latin-700italic-f8e0e2fc3f708f128ec23466b48959ad.ttf) format("truetype"),url(/static/fira-sans-v10-latin-700italic-839187f8a8b6acb0f69f5d6d95e37ef5.svg#FiraSans) format("svg")}@font-face{font-display:swap;font-family:Patua One;font-style:normal;font-weight:400;src:url(/static/patua-one-v11-latin-regular-834dba5e4b3aab2298856ba4d9abbb1a.eot);src:local("Patua One"),local("PatuaOne-Regular"),url(/static/patua-one-v11-latin-regular-834dba5e4b3aab2298856ba4d9abbb1a.eot?#iefix) format("embedded-opentype"),url(/static/patua-one-v11-latin-regular-95e3e75c69bd36dae9650e8047f2f32e.woff2) format("woff2"),url(/static/patua-one-v11-latin-regular-52f83ea060e3d2c53c53c51218dfe7e7.woff) format("woff"),url(/static/patua-one-v11-latin-regular-570bf376fc680b48f09a3d821d0fe545.ttf) format("truetype"),url(/static/patua-one-v11-latin-regular-19dda139507952afdad3dfa097a5bf02.svg#PatuaOne) format("svg")}@font-face{font-display:swap;font-family:JetBrainsMono;font-style:normal;font-weight:400;src:url(/static/JetBrainsMono-Regular-fb923cf91681b7f6ed33595c4c248408.eot);src:url(/static/JetBrainsMono-Regular-fb923cf91681b7f6ed33595c4c248408.eot?#iefix) format("embedded-opentype"),url(/static/JetBrainsMono-Regular-21ba2c11275a07ccf3890fbeab585525.woff2) format("woff2"),url(/static/JetBrainsMono-Regular-2fe9a2bdaa6daf61e770a2edb7252040.woff) format("woff"),url(/static/JetBrainsMono-Regular-cdba55f4b039e20857ba2c1793d2a1d2.ttf) format("truetype")}code[class*=language-],pre[class*=language-]{color:#f8f8f2;text-shadow:0 1px rgba(0,0,0,.3);font-family:JetBrainsMono;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#6272a4}.token.punctuation{color:#f8f8f2}.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#ff79c6}.token.boolean,.token.number{color:#bd93f9}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#50fa7b}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#f1fa8c}.token.keyword{color:#8be9fd}.token.important,.token.regex{color:#ffb86c}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.react-toggle{touch-action:pan-x;display:inline-block;position:relative;cursor:pointer;background-color:transparent;border:0;padding:0;-webkit-touch-callout:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent}.react-toggle-screenreader-only{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.react-toggle-track{width:50px;height:24px;padding:0;border-radius:30px;background-color:#0f1114;transition:all .2s ease}.react-toggle-track-check{position:absolute;width:17px;height:17px;left:5px;top:0;bottom:0;margin-top:auto;margin-bottom:auto;line-height:0;opacity:0;transition:opacity .25s ease}.react-toggle--checked .react-toggle-track-check,.react-toggle-track-x{opacity:1;transition:opacity .25s ease}.react-toggle-track-x{position:absolute;width:17px;height:17px;right:5px;top:0;bottom:0;margin-top:auto;margin-bottom:auto;line-height:0}.react-toggle--checked .react-toggle-track-x{opacity:0}.react-toggle-thumb{position:absolute;top:1px;left:1px;width:22px;height:22px;border-radius:50%;background-color:#fafafa;box-sizing:border-box;transition:all .5s cubic-bezier(.23,1,.32,1) 0ms;-webkit-transform:translateX(0);transform:translateX(0)}.react-toggle--checked .react-toggle-thumb{-webkit-transform:translateX(26px);transform:translateX(26px);border-color:#19ab27}.react-toggle--focus .react-toggle-thumb{box-shadow:0 0 2px 3px #ffa7c4}.react-toggle:active .react-toggle-thumb{box-shadow:0 0 5px 5px #ffa7c4}</style><meta name="generator" content="Gatsby 2.24.50"/><link rel="preconnect" href="https://www.google-analytics.com"/><link rel="dns-prefetch" href="https://www.google-analytics.com"/><link rel="icon" href="/favicon-32x32.png?v=1a7a954486e0162110f5d8736051d617" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=1a7a954486e0162110f5d8736051d617"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=1a7a954486e0162110f5d8736051d617"/><title data-react-helmet="true">Graphs | Computer Science Wiki</title><meta data-react-helmet="true" name="description" content="Array"/><meta data-react-helmet="true" property="og:title" content="Graphs | Computer Science Wiki"/><meta data-react-helmet="true" property="og:url" content="https://grizzi.github.io/blog/graphs/"/><meta data-react-helmet="true" property="og:description" content="Array"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:image" content="https://grizzi.github.io/static/d10d93d37152e1da01ffb2cd57004432/72b5a/c49c5b85052b889226858e6b8ff75ea6bce8edaf.png"/><meta data-react-helmet="true" property="og:image:alt" content="Graphs"/><meta data-react-helmet="true" property="og:image:width" content="1200"/><meta data-react-helmet="true" property="og:image:height" content="630"/><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"/><meta data-react-helmet="true" name="twitter:creator" content="@grizzi"/><meta data-react-helmet="true" name="twitter:title" content="Graphs | Computer Science Wiki"/><meta data-react-helmet="true" name="twitter:description" content="Array"/><meta data-react-helmet="true" name="google-site-verification" content="3mGNu0NnxE9zl9pgFOQw1XrhYuJRQ6ENkVEvgOTGRF4"/><link as="script" rel="preload" href="/webpack-runtime-b20b537eeafb2e967a7d.js"/><link as="script" rel="preload" href="/framework-7b137f8875cbc4fb65ab.js"/><link as="script" rel="preload" href="/app-6f89f36f070776bc93a1.js"/><link as="script" rel="preload" href="/styles-89fd2ae28bdf06750a71.js"/><link as="script" rel="preload" href="/commons-9e97d9eecb6827581732.js"/><link as="script" rel="preload" href="/f22e65116e117537b01f54252158ffae588a680c-72964589f1e0de4f924a.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-5d843e0f744783a27f97.js"/><link as="fetch" rel="preload" href="/page-data/blog/graphs/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3868140423.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/4085307986.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>
+void function() {
+  window.__onThemeChange = function() {}
+
+  var preferredTheme
+  try {
+    preferredTheme = localStorage.getItem('theme')
+  } catch (err) { }
+
+  function setTheme(newTheme) {
+    if (preferredTheme && document.body.classList.contains(preferredTheme)) {
+      document.body.classList.replace(preferredTheme, newTheme)
+    } else {
+      document.body.classList.add(newTheme)
+    }
+
+    window.__theme = newTheme
+    preferredTheme = newTheme
+    window.__onThemeChange(newTheme)
+  }
+
+  window.__setPreferredTheme = function(newTheme) {
+    setTheme(newTheme)
+    try {
+      localStorage.setItem('theme', newTheme)
+    } catch (err) {}
+  }
+
+  var darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  darkQuery.addListener(function(e) {
+    window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+  })
+
+  setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+}()
+    </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion-css="1q3cx8q">.css-1q3cx8q{color:var(--textNormal);padding:2.88rem 1.44rem;margin:0 auto;max-width:80%;-webkit-transition:"color 2s ease-out, background 2s ease-out";transition:"color 2s ease-out, background 2s ease-out";}</style><div class="css-1q3cx8q"><header><style data-emotion-css="xjeber">.css-xjeber{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:2.88rem;}@media (min-width:650px){.css-xjeber{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;margin-bottom:0.72rem;}}</style><div class="css-xjeber"><style data-emotion-css="1r71s5n">.css-1r71s5n{width:100%;margin-bottom:2.88rem;text-align:center;}@media (min-width:650px){.css-1r71s5n{width:unset;margin-bottom:0;text-align:unset;}}</style><a class="css-1r71s5n" href="/"><style data-emotion-css="102jt4i">.css-102jt4i{display:inline-block;font-style:normal;margin-bottom:0;color:var(--websiteTitle);}</style><h2 class="css-102jt4i">Computer Science Wiki</h2></a><style data-emotion-css="1ji94jq">.css-1ji94jq{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;margin-left:0;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (min-width:650px){.css-1ji94jq{margin-left:auto;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}</style><nav class="css-1ji94jq"><style data-emotion-css="jnu8ql">.css-jnu8ql{-webkit-text-decoration:none;text-decoration:none;color:var(--menuLink);-webkit-transition:opacity 0.2s ease-out;transition:opacity 0.2s ease-out;opacity:60%;}.css-jnu8ql:hover{opacity:100%;-webkit-text-decoration:none;text-decoration:none;}.css-jnu8ql + .css-jnu8ql{margin-top:1.44rem;}@media (min-width:650px){.css-jnu8ql + .css-jnu8ql{margin-top:0;margin-left:1.44rem;}}</style><a class="css-jnu8ql" href="/">About Me</a><a class="css-jnu8ql" style="opacity:1" href="/blog/">Blog</a><a class="css-jnu8ql" href="/contact/">Socials</a></nav></div><style data-emotion-css="15ps6ky">.css-15ps6ky{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;margin-bottom:4.32rem;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}@media (min-width:650px){.css-15ps6ky{-webkit-box-pack:unset;-webkit-justify-content:unset;-ms-flex-pack:unset;justify-content:unset;}}</style><div class="css-15ps6ky"><style data-emotion-css="15p9n5u">.css-15p9n5u{height:24px;}</style><div class="css-15p9n5u"></div></div></header><div><style data-emotion-css="j7qwjs">.css-j7qwjs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;}</style><main class="css-j7qwjs"><style data-emotion-css="34n1rj">.css-34n1rj{margin-bottom:1.44rem;}</style><a class="css-34n1rj" href="/blog/">← Back</a><article><h1>Graphs</h1><div><h2>Definitions</h2>
+<ul>
+<li>A graph or network <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex? "></img><img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G = (V, E)"></img> is defined by a set of vertices <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?V"></img> and a set of edges <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?E"></img> consisting of ordered or unordered pairs of vertices from <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?V"></img>.  Many problems have already been solved for graphs. The skill to develop is to cast data into a graph representation and pick the right already known algorithm for graphs. Examples are city maps, electronic circuits, social media and so forth...</li>
+<li>A graph <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G = (V, E)"></img> is undirected if edge <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?(x, y) \in E "></img> implies that <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?(x, y)"></img> is also in <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?E"></img>. Road networks between cities are typically undirected. Street networks within cities are almost always directed because of one-way streets.  Another examples are “callgraphs” where each node is a routine and edges represent a routing that calls another routine. This can help to find “dead code”: unconnected piece of code. </li>
+<li>In weighted graphs, each edge (or vertex) of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G"></img> is assigned a numerical value, or weight. The edges of a road network graph might be weighed with their length, drive-time or speed limit. In unweighted graphs, there is no cost distinction between various edges and vertices.  </li>
+<li>Certain types of edges complicate the task of working with graphs. A self loop and a multi edge (edge that occurs more than once between two edged) make the graph non simple. </li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 619px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/a594d100d9a1c9db08beb32bb768c5fd/e628c/80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.88235294117647%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAA2UlEQVQY0z1Q7RKEIAjs/R/z7hrFrMnPMrFujab9wYCw7OKw73vwIaVUa3XOzfN83WjMpRySn+fJzK3hjSWRfAghjL/RdEylFPDxCkLwXpMRMgS01hBAghlEa+2yLIO0Qaj1EKDd41N1cejknOs9IVFWDLB03a62bUMto7CDCZTiAjPIEWOMYo37UeVRhiW5tu+6LugQkTABqMFn3nI7m1yxrisEHjJ0cMNk7WQmXK81pZjeXfIXgFbakPFACCgfchePkYwhRZhQSnHltyUrvPPfzxddtzp5/wOXXJYIFr3Z0gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png"
+        title="80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png"
+        src="/static/a594d100d9a1c9db08beb32bb768c5fd/e628c/80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png"
+        srcset="/static/a594d100d9a1c9db08beb32bb768c5fd/04472/80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png 170w,
+/static/a594d100d9a1c9db08beb32bb768c5fd/9f933/80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png 340w,
+/static/a594d100d9a1c9db08beb32bb768c5fd/e628c/80b7ef5a9c36f3bfa27470c815411d53d5a43f15.png 619w"
+        sizes="(max-width: 619px) 100vw, 619px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>A graph is sparse when only a small fraction of the possible number of vertex pairs actually have edges defined between them. </li>
+<li>A graph is dense if each node can have a connection to any other node (considering that direction also matters). Then the number of edges is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?m = O(n^2)"></img> with <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?n"></img> the number of nodes. The efficiency of an algorithm on graphs will be evaluated on the number of nodes and edges, and often case algorithms perform best on sparse graphs. E.g road graphs are generally sparse. </li>
+<li>An acyclic graph does not contain any cycles. Trees are connected acyclic undirected graphs.</li>
+<li>DAGs are Directed Acyclic Graphs. </li>
+</ul>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1f184177c64238b48e92e09db9945e33/aa440/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 78.23529411764706%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAIAAACZeshMAAAACXBIWXMAAAsSAAALEgHS3X78AAABTUlEQVQoz6WS25KCMBBE+f/f80meVEpXuSw3gZAQ9JDRmGXdfXGqSMHMdE/3hOj2QUQ8dr4Nxipj9WR7PRm+f8Y4za46r6oLmO+vVuXdWA8mKftWGZIhQdHp9Oqq1dC46gv8kexljhtkjCm+idIYHTbNTyHjqJdyWU7TFIKX6tVFlmVt2/pk2EC+qirw0hBJ1lrLGcdxmqZ5nndd5wGegmmbzYaxNAzD8FyYMXTAB2td10VRrMYCgx1FdIIELw0RAgCcTicEO1ejvHgwVUiTJKEkyvu+f4CFSVhJKaVCw8hDET2ckmmaxpuKYEXn8XjUetkw58qwmNxut7JhdL0m8ygXUKDwcrns9/tQNm4RnLlA3eFwOJ/PL7BfDMZ2ux14WebvAM92uBGRGQmHv0ZUAf7rnjEsNh/3HBLDl7vAxdvJ5BlOg2z3zb8dDvw/7ngcp7KMWqUXAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="38252394bb87ee7840772e9c141c1e5e3d6f20ec.png"
+        title="38252394bb87ee7840772e9c141c1e5e3d6f20ec.png"
+        src="/static/1f184177c64238b48e92e09db9945e33/c5bb3/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png"
+        srcset="/static/1f184177c64238b48e92e09db9945e33/04472/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 170w,
+/static/1f184177c64238b48e92e09db9945e33/9f933/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 340w,
+/static/1f184177c64238b48e92e09db9945e33/c5bb3/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 680w,
+/static/1f184177c64238b48e92e09db9945e33/b12f7/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 1020w,
+/static/1f184177c64238b48e92e09db9945e33/b5a09/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 1360w,
+/static/1f184177c64238b48e92e09db9945e33/aa440/38252394bb87ee7840772e9c141c1e5e3d6f20ec.png 1500w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>In labeled graphs, each vertex is assigned a unique name or identifier to distinguish if from all the other vertices. An important graph problem is isomorphism testing, determining whether the topological structure of two graphs are in fact identical if we ignore any labels.  </li>
+</ul>
+<h2>Representing a Graph</h2>
+<p>Recall that a graph <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G=(V, E)"></img> contains <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?n"></img> vertices and <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?m"></img> edges. A graph can be represented with different data structures, namely</p>
+<h3>Adjacency Matrix</h3>
+<p>We can represent <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G "></img> using an <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?n\times m"></img> matrix <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?
+M"></img>, where elements <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?M[i, j]"></img> is 1 if <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?(i, j)"></img> is an edge of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G"></img> and 0 if it isn't. It may use excessive space for graphs with many vertices and relatively few edges, however. Can we save space if the graph is (1) undirected? (2) sparse ?  Yes, in this case we only need to store the upper triangular part of the adjacency matrix, as the connection to each node’s predecessors are already there. </p>
+<h3>Adjacency List</h3>
+<p>An adjacency list consists of a <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?N \times 1"></img> array of pointers, where the ith element points to a linked list of the edges incident on vertex i. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 598px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/f53d56cb499a19f794c58befc26970e3/0c69d/e5568e7c55c36e76c80d8bca2f134928362ed916.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 29.411764705882355%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAIAAABM9SnKAAAACXBIWXMAAAsSAAALEgHS3X78AAAA4ElEQVQY022Qy26DMBBF+f9vKs3WsIZKLgtElCIS4deAH4hHex2LZFMvRp7xnLl3nP3+d6y1WiljzDAM8zyjchwHgtFGa62kEkI65zI87PuOtxSRbttW11+Xz0tRlJx/oy9NDN73fW+IlJQYMY5jRkRt2wK43X6WZTnhGjBjBedcCJFg7/3j/rDWwZF3HvoZ1GEFCUrAElxVVf6Rl2W5rmuy84Jd7KRpmqSUUbnrriEs3bVTSqEJQNM0jDGMSFjiQ/D4ApDAoATncWcyFNc9FVI7dGDqeX2XYSo6NQQB/NEf7hNUqNd5uU8AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="e5568e7c55c36e76c80d8bca2f134928362ed916.png"
+        title="e5568e7c55c36e76c80d8bca2f134928362ed916.png"
+        src="/static/f53d56cb499a19f794c58befc26970e3/0c69d/e5568e7c55c36e76c80d8bca2f134928362ed916.png"
+        srcset="/static/f53d56cb499a19f794c58befc26970e3/04472/e5568e7c55c36e76c80d8bca2f134928362ed916.png 170w,
+/static/f53d56cb499a19f794c58befc26970e3/9f933/e5568e7c55c36e76c80d8bca2f134928362ed916.png 340w,
+/static/f53d56cb499a19f794c58befc26970e3/0c69d/e5568e7c55c36e76c80d8bca2f134928362ed916.png 598w"
+        sizes="(max-width: 598px) 100vw, 598px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>To test if edge <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex? (i,j)"></img> is in the graph, we search the ith list for <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?j"></img> which takes <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(d_i)"></img> where <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?d_i"></img> is the degree of the ith vertex. Note that <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?d_i"></img> can be much less than n when the graph is sparse.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 626px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/38a2ac05b547e20e78a1a1c1f51bd114/af590/59363a127ee14ba3bea400b190db6de87b0d0747.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 47.05882352941176%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAA7DAAAOwwHHb6hkAAABoElEQVQoz12RyW7CUAxF8//fg1rBKkBoEpL3Mk+EGSoxNGTDuLq1TamqLqw3+tj32oiiEKZpotPpoNvtot/vo6oqTKdT1HWNsiwliqLAeDzGcrmUt9lshsViAa0V3t7e0ev1kOU5jKLI4fk+giBATheeN4ZSGnEcI4oieARxXRfr9UbAp9MJx+NRomm+KCejHE9yuJCxmM9RTSbS1Zz2DJpTde6IQyklnTRNI+vtdsP5fMb1epW43+8C1jqQ7o2yLJCk6bMbqhSGEZIkkbPjOAI0zb6sWmuwRUmSimQOVsWMoijFIqMiGZzMklkaJ8WUxACXgIPBQLzbbj+fnlLXjmNTTkzFQ1jWSFS59EckM9AajeATQCkf9oeNgPZcYDi0YNs2JmQJe8Yetm1LPjbIspTehwJNfxQKcELeKYFpap884wHRJw6Wz93w236/F3DbnqRYmmY0qLX4PiMQv9U1AfMsg03SWCp/DKmST1D2c2hZ4uN6s8FutxO/eMqHw+F30nxerVaiRDrkKfHULpeLTI3Xv2eOx+Mh03zt/8eLwes3rWV9y/nB22QAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="59363a127ee14ba3bea400b190db6de87b0d0747.png"
+        title="59363a127ee14ba3bea400b190db6de87b0d0747.png"
+        src="/static/38a2ac05b547e20e78a1a1c1f51bd114/af590/59363a127ee14ba3bea400b190db6de87b0d0747.png"
+        srcset="/static/38a2ac05b547e20e78a1a1c1f51bd114/04472/59363a127ee14ba3bea400b190db6de87b0d0747.png 170w,
+/static/38a2ac05b547e20e78a1a1c1f51bd114/9f933/59363a127ee14ba3bea400b190db6de87b0d0747.png 340w,
+/static/38a2ac05b547e20e78a1a1c1f51bd114/af590/59363a127ee14ba3bea400b190db6de87b0d0747.png 626w"
+        sizes="(max-width: 626px) 100vw, 626px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>Test if <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?(x, y)"></img> exists is just as easy as looking to an entry in the adjacency matrix. </li>
+<li>Find vertex out-degree (connection) is equivalent to sum up the row in the matrix <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n)"></img> and getting the ith list size <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(1)"></img>.</li>
+<li>When graphs are sparse, lists are obvious winners</li>
+<li>When graphs are dense, lists come with all the overhead of pointers storage and matrices are minor winner. </li>
+</ul>
+<p>Both representations are very useful and have different properties, although adjacency lists are probably better for most problems. In any case we want to define a structure containing node information and the graph. </p>
+<div class="gatsby-highlight" data-language="cpp"><pre class="language-cpp"><code class="language-cpp"><span class="token comment">// structure reprenseting an edge coming from the head of the list</span>
+<span class="token keyword">struct</span> <span class="token class-name">edge_node</span><span class="token punctuation">{</span>
+  <span class="token keyword">int</span> y<span class="token punctuation">;</span>            <span class="token comment">// next node index</span>
+  <span class="token keyword">int</span> weight<span class="token punctuation">;</span>       <span class="token comment">// weight for weighted graph</span>
+  edge_node<span class="token operator">*</span> next<span class="token punctuation">;</span>  <span class="token comment">// actual next node pointer</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token expression">MAX_VERTICES <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span></span></span>
+
+<span class="token keyword">template</span> <span class="token keyword">typename</span><span class="token operator">&lt;</span>T<span class="token operator">></span>
+<span class="token keyword">struct</span> <span class="token class-name">vertex</span><span class="token punctuation">{</span>
+  <span class="token comment">// my implementation</span>
+  <span class="token keyword">const</span> <span class="token keyword">int</span> id<span class="token punctuation">;</span>  <span class="token comment">// id assigned statically on creation</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">template</span> <span class="token keyword">typename</span><span class="token operator">&lt;</span>T<span class="token operator">></span>
+<span class="token keyword">struct</span> <span class="token class-name">graph</span><span class="token punctuation">{</span>
+  edge_node<span class="token operator">*</span> <span class="token keyword">new</span> edges<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// list of pointers, one per node each node can be traversed to go through all edges starting in the node</span>
+  vertex <span class="token keyword">new</span> vertices<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> in_degree<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> out_degree<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> nvertices<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> nedges<span class="token punctuation">;</span>
+  <span class="token keyword">bool</span> directed<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">initialize_graph</span><span class="token punctuation">(</span>graph<span class="token operator">*</span> g<span class="token punctuation">,</span> <span class="token keyword">bool</span> directed<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  g<span class="token operator">-></span>nvertices <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  g<span class="token operator">-></span>nedges <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  g<span class="token operator">-></span>directed <span class="token operator">=</span> directed<span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>MAX_VERTICES<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> g<span class="token operator">-></span>degree<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>MAX_VERTICES<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> g<span class="token operator">-></span>edges<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">nullptr</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">insert_edge</span><span class="token punctuation">(</span>graph<span class="token operator">*</span> g<span class="token punctuation">,</span> vertex<span class="token operator">&amp;</span> v<span class="token punctuation">,</span> vertex<span class="token operator">&amp;</span> w<span class="token punctuation">,</span> <span class="token keyword">bool</span> directed<span class="token punctuation">,</span> <span class="token keyword">double</span> weight<span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token comment">// we want an edge from x to y</span>
+  <span class="token keyword">int</span> x <span class="token operator">=</span> v<span class="token punctuation">.</span>id<span class="token punctuation">;</span>
+  <span class="token keyword">int</span> y <span class="token operator">=</span> v<span class="token punctuation">.</span>id<span class="token punctuation">;</span>  
+  
+  <span class="token comment">// Insert new edge at the beginning of the list</span>
+  <span class="token comment">// edges[x] store the pointers to the neighbors: edges[x]->next->next is the third neighbor of x</span>
+  <span class="token comment">// to add y as new neighbor we create a new edge p and set p->next = edges[x] and reglue the head </span>
+  <span class="token comment">// of the list to p setting edges[x] = p</span>
+  p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">edge_node</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  p<span class="token operator">-></span>weight <span class="token operator">=</span> weight<span class="token punctuation">;</span>
+  p<span class="token operator">-></span>y <span class="token operator">=</span> y<span class="token punctuation">;</span>
+  p<span class="token operator">-></span>next <span class="token operator">=</span> g<span class="token operator">-></span>edges<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  edges<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">=</span> p<span class="token punctuation">;</span>
+  
+  vertex
+  v<span class="token operator">-></span>next <span class="token operator">=</span> w<span class="token punctuation">;</span>
+  w<span class="token operator">-></span>in_degree<span class="token operator">++</span><span class="token punctuation">;</span>
+  v<span class="token operator">-></span>out_degree<span class="token operator">++</span><span class="token punctuation">;</span>
+  g<span class="token operator">-></span>degree<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>directed<span class="token punctuation">)</span><span class="token punctuation">{</span> g<span class="token operator">-></span>nedges<span class="token operator">++</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token function">insert_edge</span><span class="token punctuation">(</span>g<span class="token punctuation">,</span> w<span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// insert also in the other direction and stop</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>Incidence Matrix</h3>
+<p>An incidence matrix <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?I"></img> has a row for each vertex and a column for each edge, such taht <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?I[i,j]=1"></img> if vertex i is part of edge j, otherwise <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?I[i,j]=0"></img>.  Lets assume that each edge is numbered from 1 to M. </p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">adjacence_to_incidence</span><span class="token punctuation">(</span>A<span class="token punctuation">:</span> AdjacenceMatrix<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    I <span class="token operator">=</span> IncidenceMatrix<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># O(nm)</span>
+    edge <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        l <span class="token operator">=</span> A<span class="token punctuation">(</span>i<span class="token punctuation">)</span>  <span class="token comment"># go over all the nodes</span>
+        <span class="token keyword">while</span> l <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span> <span class="token comment"># find all the connected nodes</span>
+            j <span class="token operator">=</span> l<span class="token punctuation">.</span>y <span class="token comment"># index of the node connected to this one  </span>
+            
+            <span class="token comment"># this test is to avoid to create a duplicate edge in case of an undirected graph</span>
+           <span class="token comment"># when visiting node j </span>
+            <span class="token keyword">if</span> i <span class="token operator">&lt;</span> j<span class="token punctuation">:</span>
+                I<span class="token punctuation">[</span>i<span class="token punctuation">,</span> edge<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+                I<span class="token punctuation">[</span>j<span class="token punctuation">,</span> edge<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+                edge<span class="token operator">+</span><span class="token operator">+</span>  <span class="token comment"># I have discovered a new edge</span>
+            l <span class="token operator">=</span> l<span class="token punctuation">.</span><span class="token builtin">next</span>    </code></pre></div>
+<p>What is the complexity of the previous algorithm? We are visiting in total any adjacency edge for each node. It means we are performing computation <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?2m"></img> times. Thus the algorithm is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m)"></img>. What if the graph has a set of nodes with no friends. Anyway we have to go through these nodes to find out they have no connected edges. Therefore in general the algorithm takes <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n + m)"></img>. This is a general concept that will come back when analyzing the complexity of algorithms on graph. Often they are a function of the edges number since for each node we will visit all the edges once. But we cannot simply write that the algorithm is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m)"></img> since for a graph with no edges the complexity would go down to 0. Instead, we account for the fact, that even when no edges are there, we still have to go through the nodes and say instead that the algorithm is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n + m)"></img>.</p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">incidence_to_adjacence</span><span class="token punctuation">(</span>I<span class="token punctuation">:</span> IncidenceMatrix<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># we traverse column by column. The two 1s entries will tell use which nodes are connected</span>
+    g <span class="token operator">=</span> AdjacencyList<span class="token punctuation">(</span>n<span class="token punctuation">)</span>  <span class="token comment"># O(n) insert n null pointers</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        x<span class="token punctuation">,</span> y <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> I<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span><span class="token punctuation">:</span> x <span class="token operator">=</span> j
+            <span class="token keyword">if</span> I<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token keyword">and</span> x<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">:</span> y <span class="token operator">=</span> j
+        insert_edge<span class="token punctuation">(</span>g<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> </code></pre></div>
+<p>The full algorithm will be dominated by the scan of the incidence list which is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(nm)"></img>.</p>
+<h2>Algorithms on Graph</h2>
+<p>We will talk about many algorithms that can be applied on graph to solve a set of different problems. In particular we will see the following ones:</p>
+<ul>
+<li>Auxiliary data structures</li>
+<li>Topological Order</li>
+<li>Minimum Spanning Tree (MST)</li>
+<li>Graph Traversal</li>
+</ul>
+<p>Before going deeper in the single algorithms implementation we will make a small detour on two topics which will be used in the rest of the section. Many algorithms on graphs traverse it and along the way they build a tree (they try not to connect nodes that have already been visited, as this would be a waste of processing time and lead to unless loop or recursion). Therefore we need a way to store this tree along the way. In other different problems, we might want to add nodes to different subgraphs and from time to time efficiently find if the node already belongs to a subgraph and merge the two subgraph (set of nodes) together. This is generally done using a clever data structure called union-find (as it supports the union and find methods).  </p>
+<h2>Auxiliary Data Structures</h2>
+<h3>Representing Trees: the Parent array</h3>
+<p>A very simple way to represent a tree is to store an array with as many entries as the nodes. Entry i stores the index of its parent. To traverse the tree we then see we loop for each entry and traverse the child to parent relationship until we hit and entry with <code class="language-text">nullptr</code> (or -1 if referring to indices) as parent. In the meanwhile we need to keep a <code class="language-text">visited</code> array to make sure we don't reprocess (e.g print) parents already visited as predecessors of other nodes.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/07c496ce838fd1505c985ab8edb7d392/5d030/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 35.29411764705882%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAAAy0lEQVQY04WQzW7EIAyEef+XW2nbe7tRL20qAebHQBKyn0Cb644c4ow9eBzTez/P7tP+69oq2+rb3wg+Je/nC8dxcG7b5r0vpUzSpJRzTo+13b7186d+LOX+0Puit6+8/NfZREeMcR8gEZHWGteZWY65WVEXyhVWStI2q4xCEEKotSLzA5CGl7MuUBOXUySCeEK8izFMMW7RIFbVPkACY7YBLYp/KJ78wrXbtM3YSwxjrTXnO7AbrdieYnJO7iJ5L562J9gRDb8NkvlPUdaW1mA9/rAAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png"
+        title="4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png"
+        src="/static/07c496ce838fd1505c985ab8edb7d392/c5bb3/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png"
+        srcset="/static/07c496ce838fd1505c985ab8edb7d392/04472/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png 170w,
+/static/07c496ce838fd1505c985ab8edb7d392/9f933/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png 340w,
+/static/07c496ce838fd1505c985ab8edb7d392/c5bb3/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png 680w,
+/static/07c496ce838fd1505c985ab8edb7d392/5d030/4deb72ff8dfcf059a21ffce1c81a6c2dd1eddfb7.png 771w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>Representing Disjoint Sets: Union-Find</h3>
+<p>See disjoint sets. </p>
+<h2>Topological sorting</h2>
+<p>Topological sorting is what allows us to provide an ordering of a direct acyclic graph (DAG). A topological sort of a graph is an ordering on the vertices so that all edges go from left to right. Consider for example the dressing schedule (how we get dressed in the morning). We can model the precedence constraints on the different clothes items as a DAG. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 662px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/31bcaa7f08b0bfb0ab9bee23b8651481/be86f/97011526e79c7a9ff2be8c7c832efac81ff3b76d.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 81.17647058823529%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAABRklEQVQ4y52UC2+DMAyEIZBCSHkU0dHHOtqu26T9/x84I32Wogw6aZFOGMc5ny+IJPm9rGATIY1q0ihOk5WVCUpI7oKKOI8a1oI92FKzuiyoOLilUbjfCK6CSdA+I9RxLSSqbn4WAbGNmqyO64JxG0h0XE/uJtgF/v5JmjOqJTb4WmPDPGZHrnlGpocLYAIys9C4wN8JpWVsg/p1p7DE8KWlBLPiC7FTe3L86SDYE9vkn8uh6lvwKfgQvJKvQIOHNfmOWC/GxH40FHlUDoIetQfBidyRpgOjXrBn4LxRPw4QbHi+oGTE9Dcaed49n84VpSPNMvXwXfAleDC+HkrpmuGpiS4wWfrADXJHlA4o7MGO/JHRz7yf2a8Y2+pPwgZELRcy4Y+n0YgFPR56/H0w8glkKtnTyXFBLc+SPU9cBDftghpHjfkBarIMwJeZ81oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="97011526e79c7a9ff2be8c7c832efac81ff3b76d.png"
+        title="97011526e79c7a9ff2be8c7c832efac81ff3b76d.png"
+        src="/static/31bcaa7f08b0bfb0ab9bee23b8651481/be86f/97011526e79c7a9ff2be8c7c832efac81ff3b76d.png"
+        srcset="/static/31bcaa7f08b0bfb0ab9bee23b8651481/04472/97011526e79c7a9ff2be8c7c832efac81ff3b76d.png 170w,
+/static/31bcaa7f08b0bfb0ab9bee23b8651481/9f933/97011526e79c7a9ff2be8c7c832efac81ff3b76d.png 340w,
+/static/31bcaa7f08b0bfb0ab9bee23b8651481/be86f/97011526e79c7a9ff2be8c7c832efac81ff3b76d.png 662w"
+        sizes="(max-width: 662px) 100vw, 662px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>It is not possible to obtain a topological ordering in a undirected graph, since there is no notion of precedence in such a graph. Similarly, if there is a loop, we cannot find a topological sort of the graph since there is a cyclic dependency. Note that candidate starting nodes for a topological sort are nodes that have in degree <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?0 "></img> (no parents). Therefore we keep a indegree order and in a consecutive manner pop nodes which have degree 0. As this are popped, new nodes will have indegree zero and will be pushed to the queue. We continue until the queue is empty.  </p>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">topological_sort</span><span class="token punctuation">(</span>g<span class="token punctuation">:</span> graph<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  pre_process_graph<span class="token punctuation">(</span>g<span class="token punctuation">)</span> <span class="token comment"># compute in degree per each node O(n+m) as we need to pass through all node and edges</span>
+  <span class="token keyword">for</span> node <span class="token punctuation">:</span> graph
+    <span class="token keyword">if</span> node<span class="token punctuation">.</span>in_degree <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">-</span><span class="token operator">></span> q<span class="token punctuation">.</span>enqueue<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+   
+  <span class="token keyword">if</span> queue<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"There is no node with in-degree 0: not a DAG"</span><span class="token punctuation">)</span>
+		<span class="token keyword">return</span> <span class="token boolean">False</span>
+
+  <span class="token keyword">while</span> <span class="token keyword">not</span> queue<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># each node will be put in the queue once O(n)</span>
+    node <span class="token operator">=</span> q<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    do_something_with_node<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> child <span class="token keyword">in</span> node<span class="token punctuation">.</span>child<span class="token punctuation">:</span>
+      child<span class="token punctuation">.</span>in_degree <span class="token operator">-=</span> <span class="token number">1</span>  <span class="token comment"># in total we are going to excecute this decrement m times -> O(m)  </span>
+      <span class="token keyword">if</span> child<span class="token punctuation">.</span>in_degree <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>  <span class="token comment"># this node became a good new candidate as a node in the topological ordered sequence</span>
+        q<span class="token punctuation">.</span>push<span class="token punctuation">(</span>child<span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token boolean">True</span></code></pre></div>
+<h2>Minimum Spanning Tree (MST)</h2>
+<p>A tree is a connected graph with no cycles. A spanning tree is a subgraph of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G "></img> which has the same set of vertices of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G"></img> and is a tree. A minimum spanning tree of a weighted graph <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G"></img> is the spanning tree of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?G"></img> whose edges sum to minimum weight. There can be more than one minimum spanning tree in a graph → consider a graph with identical weight edges for example. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/4c8d972a68a17f42fb4bc22f51a34cba/73b94/3ae574276913c18615e348452835d63ef0fe499f.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 40.588235294117645%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAIAAAB2/0i6AAAACXBIWXMAAAsSAAALEgHS3X78AAABXklEQVQY00VRTWvCQBDNj+0PKN567KHXftDSU4VSpAehh5ZCLQQsIphKpYjiR6upmkRdbdx8bnaTTdLZxCosw+ybffPezEpJkqRpatu2pmmQ5NckFlF+GhoTKwO3uK2h0auS5lCaSjmqqqqiKJzzHd/3WPG88VGfZk+3oKZ0lMvynkwplWUZYxzHcbVanc10QB9uP0vXTUjaTf2kUIGEueTl8MwcCXdvxzdjWVQlxthgMAiCgBACzi1L+Oy05l/dVa7/3RNJzOPhcz2w3Ey/iyfzvbLjONClVqv1en1Ay8XW3dU7WB3310cHj5wnEQkqhQsPmVBtnN63S8KOBG4RQqAMA0OEXoBu1r658sKQMxp5DsuUOeqOQ0JhfGLaAXYEOd8QKIPt3baIHxpTS/vBS8MBfk62dbRRDazO7RlyF78RZYK84/xvMfVcttSd1cKlQbT9vEQI+msMh7Mof/oHbAS6vwVFLTsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="3ae574276913c18615e348452835d63ef0fe499f.png"
+        title="3ae574276913c18615e348452835d63ef0fe499f.png"
+        src="/static/4c8d972a68a17f42fb4bc22f51a34cba/c5bb3/3ae574276913c18615e348452835d63ef0fe499f.png"
+        srcset="/static/4c8d972a68a17f42fb4bc22f51a34cba/04472/3ae574276913c18615e348452835d63ef0fe499f.png 170w,
+/static/4c8d972a68a17f42fb4bc22f51a34cba/9f933/3ae574276913c18615e348452835d63ef0fe499f.png 340w,
+/static/4c8d972a68a17f42fb4bc22f51a34cba/c5bb3/3ae574276913c18615e348452835d63ef0fe499f.png 680w,
+/static/4c8d972a68a17f42fb4bc22f51a34cba/73b94/3ae574276913c18615e348452835d63ef0fe499f.png 1004w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>Minimum spanning tree is always taught in algorithm courses since:</p>
+<p>Example application 1:  Minimum spanning trees are useful in constructing networks, by describing the way to connect a set of sites using the smallest total amount of wire.
+Example application 2: Minimum spanning trees provide a reasonable way for clustering points in space into natural groups.</p>
+<h3>Prims Algorithm</h3>
+<p>Prims algorithm starts from one vertex and grows the rest of the tree an edge at a time. As a greedy algorithm it picks the cheapest edge with which can grow the tree by one vertex without creating a cycle. </p>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html">prims_minimum_spanning_tree(graph G)
+  - Select an arbitrary vertex (s) to start the tree from
+  - while (there are still non-tree vertices)
+      - select the edge of minimum weight between the tree and non selected vertices    // greedy choice
+      - add the selected edge and vertex to the tree T_prim</code></pre></div>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/3ff778ff55c3c62974a3b807a4fe2ef6/84a90/249fe423260eeb519fee43556359edcd0afe9fec.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 58.235294117647065%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAABMElEQVQozz3S23LCMAwEUP//Z8KEARIuhVwJtD31TqOHjLySduV1yneNx+Pxer1+anw+n/f7Len7fhzHDRSSYRimaQpYvmrcbrfL5bKuKyIsuO73O7zrunmeA+qBwIHmgcWBgu7z+fx8PkFkgxBp2xbpsix02hp20Xm9XtEVxGiiichuWiH5mqFjYK6BNETZouQOyvka9tWUY8aIDDWmGhIglpLuiBCPN5LoxKTNMKDJgH93jtvm43AiLKHfkICQ7V1KdutqpKwGoeBWp9Mp80CLAJm6geVwOOSpdrudsnnmKTNW636/ZyzEqk3TEDCsU79Ni4MmTMaOxyM+iOeJMXE7uQGluKNBXhzip8SZgq9HXv4jzwOxoFxnbHO14pDumIx1rZE7q8YqCAqC248M/AXjxLZ+BxGDKAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="249fe423260eeb519fee43556359edcd0afe9fec.png"
+        title="249fe423260eeb519fee43556359edcd0afe9fec.png"
+        src="/static/3ff778ff55c3c62974a3b807a4fe2ef6/c5bb3/249fe423260eeb519fee43556359edcd0afe9fec.png"
+        srcset="/static/3ff778ff55c3c62974a3b807a4fe2ef6/04472/249fe423260eeb519fee43556359edcd0afe9fec.png 170w,
+/static/3ff778ff55c3c62974a3b807a4fe2ef6/9f933/249fe423260eeb519fee43556359edcd0afe9fec.png 340w,
+/static/3ff778ff55c3c62974a3b807a4fe2ef6/c5bb3/249fe423260eeb519fee43556359edcd0afe9fec.png 680w,
+/static/3ff778ff55c3c62974a3b807a4fe2ef6/84a90/249fe423260eeb519fee43556359edcd0afe9fec.png 982w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<p>We start from A and we add the edge of weight 1. After we choose the minimum edge available to the grown tree, which is the edge 1. We repeat and we choose now 3 ((there are many so we break tie somehow, e.g. based on node labels) which is the minimum attached to the already grown tree non creating cycles  and so forth ... The question is, how do we know that this procedure produces the minimum spanning tree? </p>
+<h3>Why is Prim correct?</h3>
+<p>We use a proof by contradiction: given a starting minimum spanning tree, the algorithm cannot extend to a node x making the tree non MST. If this would be the case there could be another path reaching out from the current tree to the node x with smaller weight, but then the path leading the node x and passing so to speak through node v has a edge to v which is less then the direct edge to x. But Prims would choose this edge instead, therefore we reach a contradiction. More detailed proof here: <a href="https://home.uncg.edu/cmp/faculty/srtate/330.f16/primsproof.pdf" target="_blank" rel="nofollow noopener noreferrer">https://home.uncg.edu/cmp/faculty/srtate/330.f16/primsproof.pdf</a></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/1004bad5c30ac427193cb1454bf0c5bf/e2e58/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 42.94117647058824%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABH0lEQVQoz31Sa4+DIBD0//+/i/GDSX0eVqviA0TRKYvBUi+5TVYFhtndGYPjOECx77tNF7Tv0q3d+z9cQI9t2yxoWRa0VQUxz/DDgbXWNhel0DcNeNf/wQUEILKu65ClKZ5xjKk/gVToTjabYmmeoUkfqIsn5AIoRbiz62BdV/SGIDZEYRh+VWvb9hqPyKdxwiN5IPqJoFcnFVCUPaRUJyFdzPMcnHMQOY0rpbx09TWq6xqsYoZMY8xGjK/J4qQ8zF2vQxqlLEvbBZENw2C7S5LkGpnOCMd+mRlTmu8NZfEy0wlEUWwIt0+HROqMcUEy0J5vCq0dsQvOB6Oh+phyd4nMoQJ3h+9RMXYV9HGBrxGllALa0+7+r7kUQnxp7HBvNcrAwCpIAFgAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png"
+        title="77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png"
+        src="/static/1004bad5c30ac427193cb1454bf0c5bf/c5bb3/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png"
+        srcset="/static/1004bad5c30ac427193cb1454bf0c5bf/04472/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png 170w,
+/static/1004bad5c30ac427193cb1454bf0c5bf/9f933/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png 340w,
+/static/1004bad5c30ac427193cb1454bf0c5bf/c5bb3/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png 680w,
+/static/1004bad5c30ac427193cb1454bf0c5bf/b12f7/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png 1020w,
+/static/1004bad5c30ac427193cb1454bf0c5bf/e2e58/77d62ce5c73f2588662ce7d2a4a8f65f473dc914.png 1069w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<h3>Implementation</h3>
+<p>Implementation of this algorithm, requires to know which is the newest minimum available edge on the fringe (unattached border to the tree being grown so far).  We can implement prims algorithm in 2 ways:</p>
+<ul>
+<li>storing a vector of distances that we update as we add new border nodes, and all the time pick a node in this list not yet in the tree and with minimum distance</li>
+<li>storing distances of the grown tree to every new vertex in a heap. That means that for every edge that changes, we need to update the corresponding heap. </li>
+</ul>
+<p>Implementation with distances vector </p>
+<div class="gatsby-highlight" data-language="cpp"><pre class="language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">mst_prim_dist</span><span class="token punctuation">(</span>graph <span class="token operator">*</span>g<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">int</span> i<span class="token punctuation">;</span>                               <span class="token comment">/* counter */</span>
+  edge_node <span class="token operator">*</span>p<span class="token punctuation">;</span>                        <span class="token comment">/* temporary pointer */</span>
+  <span class="token keyword">bool</span> intree<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span>           <span class="token comment">/* is the vertex in the tree yet? */</span>
+  <span class="token keyword">int</span> distance<span class="token punctuation">[</span>MAX_VERTICES<span class="token punctuation">]</span><span class="token punctuation">;</span>          <span class="token comment">/* cost of adding to tree */</span>
+  <span class="token keyword">int</span> v<span class="token punctuation">;</span>                               <span class="token comment">/* current vertex to process */</span>
+  <span class="token keyword">int</span> w<span class="token punctuation">;</span>                               <span class="token comment">/* candidate next vertex */</span>
+  <span class="token keyword">int</span> dist<span class="token punctuation">;</span>                            <span class="token comment">/* cheapest cost to enlarge tree */</span>
+  <span class="token keyword">int</span> weight <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>                      <span class="token comment">/* tree weight */</span>
+  
+  <span class="token comment">// initialization of flags</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> g<span class="token operator">-></span>nvertices<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    intree<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    distance<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> MAXINT<span class="token punctuation">;</span>
+    parent<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  distance<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  v <span class="token operator">=</span> start<span class="token punctuation">;</span>
+  <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>intree<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// n</span>
+    intree<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">!=</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      weight <span class="token operator">=</span> weight <span class="token operator">+</span> dist<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">// wwe are adding a new node -> update nodes distances if this is smaller then the one found so far</span>
+    <span class="token comment">// we will go over each child of the node which is O(n)</span>
+    p <span class="token operator">=</span> g<span class="token operator">-></span>edges<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>p <span class="token operator">!=</span> <span class="token keyword">nullptr</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      w <span class="token operator">=</span> p<span class="token operator">-></span>y<span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>distance<span class="token punctuation">[</span>w<span class="token punctuation">]</span> <span class="token operator">></span> p<span class="token operator">-></span>weight<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token operator">!</span>intree<span class="token punctuation">[</span>w<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        distance<span class="token punctuation">[</span>w<span class="token punctuation">]</span> <span class="token operator">=</span> p<span class="token operator">-></span>weight<span class="token punctuation">;</span>
+        parent<span class="token punctuation">[</span>w<span class="token punctuation">]</span> <span class="token operator">=</span> v<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      p <span class="token operator">=</span> p<span class="token operator">-></span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">// in the previous loop we have updated distances of a newly added node, pick the one which is not yet in the tree and is the minimum</span>
+    dist <span class="token operator">=</span> MAXINT<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> g<span class="token operator">-></span>nvertices<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token comment">// O(n)</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">!</span>intree<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>dist <span class="token operator">></span> distance<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        dist <span class="token operator">=</span> distance<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        v <span class="token operator">=</span> i<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+   <span class="token comment">// total of one while loop O(n)+O(n)=O(n). This will be executed n times. </span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span><span class="token punctuation">(</span>weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre></div>
+<p>After adding a vertex v to the tree, by running through its adjacency list in <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n)"></img> time we check whether it provides a cheaper way to connect its neighbors to the tree. If so, update the distance value. The total time is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?n × O(n) = O(n^2)."></img></p>
+<p>Implementation with heap</p>
+<p>We will use two arrays:</p>
+<ul>
+<li><code class="language-text">parents</code> : keeps track of the nodes discovered so far (it is a representation of a tree)</li>
+<li><code class="language-text">value</code> :  cost of adding that new node in the spanning tree. This is a current picture of the fringe that is likely that is added. This can be implemented as a min-heap since it allows to easily retrieve from the new potential fringe. </li>
+</ul>
+<div class="gatsby-highlight" data-language="python"><pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">mst_prim_heap</span><span class="token punctuation">(</span>g<span class="token punctuation">:</span> graph<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  <span class="token keyword">for</span> idx<span class="token punctuation">,</span> vertex <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>graph<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    parents<span class="token punctuation">[</span>idx<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+    min_heap<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token punctuation">(</span>idx<span class="token punctuation">,</span> inf<span class="token punctuation">)</span><span class="token punctuation">)</span>
+	
+  <span class="token comment"># start with the minimum of the queue being a first arbitrary node</span>
+  min_heap<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token number">0</span>
+  
+  <span class="token comment"># keep going until when we removed all nodes from the heap</span>
+  <span class="token keyword">while</span> <span class="token keyword">not</span> min_heap<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># extract greadily the new min from the heap</span>
+    idx<span class="token punctuation">,</span> value <span class="token operator">=</span> min_heap<span class="token punctuation">.</span>extract_min<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    x <span class="token operator">=</span> g<span class="token punctuation">.</span>nodes<span class="token punctuation">[</span>idx<span class="token punctuation">]</span>
+
+    <span class="token comment"># look for all its neighbors</span>
+    <span class="token comment"># if we fing that this neighbor can be better connected to the </span>
+    <span class="token comment"># node with a lower weight, we set its parent to the current node </span>
+    <span class="token comment"># and update the heap</span>
+    <span class="token keyword">for</span> y <span class="token keyword">in</span> nodes<span class="token punctuation">[</span>idx<span class="token punctuation">]</span><span class="token punctuation">.</span>adjacent<span class="token punctuation">:</span>
+      <span class="token keyword">if</span> y <span class="token keyword">in</span> min_heap <span class="token keyword">and</span> g<span class="token punctuation">.</span>edge_value<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token operator">&lt;</span> y<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+        parents<span class="token punctuation">[</span>y<span class="token punctuation">]</span> <span class="token operator">=</span> x
+        min_heap<span class="token punctuation">.</span>update<span class="token punctuation">(</span>y<span class="token punctuation">,</span> g<span class="token punctuation">.</span>edge_value<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre></div>
+<p>Analysis</p>
+<ul>
+<li>We started out creating an heap for all elements <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n)"></img></li>
+<li>We are going to do the comparison with the edge value (<code class="language-text">if y in min_heap and g.edge_value(x, y) &lt; y.value</code>) as many times in total as the number of edges.  For every of this edge where the conditional is successful we have to update the heap which takes <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(\log n) "></img> (we are assuming a balanced heap) for a total of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m\log n)"></img></li>
+<li>We are taking something off the heap as many times as the nodes <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n)"></img> and taking something off the heap will take <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(\log n)"></img> for a total of <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n\log n)"></img></li>
+<li>Summing up we have <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n) + O(m\log n) + O(n\log n) = O(m \log n)"></img></li>
+</ul>
+<h3>Analysis</h3>
+<p>Prims algorithm complexity is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m\log n)"></img>. In the previous implementation we where basically finding the minimum without using the heap, but linearly searching n times for the minimum which is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n)"></img>. This is <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(n^2)"></img>. In other words, in each of the two algorithms we have the following operations going on: a distance update, the number of outer iterations and the find of the minimum entry. Distance update is trivial for an array (just access that memory entry) but finding the minimum requires scanning the full array. Instead with an heap, min retrieval is fast (root of the heap) and update is logarithmic. </p>
+<ul>
+<li>A sparse graph has:  <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?m < n \Rightarrow O(m\log n) < O(n\log n)< O(n^2)"></img></li>
+<li>A dense bushy graph has <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?m \approx n^2 \Rightarrow O(m\log n) \approx O(n^2\log n) > O(n^2)"></img></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code class="language-text">distance update</code></th>
+<th><code class="language-text">outer iterations</code></th>
+<th><code class="language-text">extract min</code></th>
+<th><strong>final complexity</strong></th>
+<th><strong>application</strong></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>distance vector</strong></td>
+<td>O(1)</td>
+<td>n</td>
+<td>n (linear search)</td>
+<td>O(n^2)</td>
+<td>dense graphs</td>
+</tr>
+<tr>
+<td><strong>min heap</strong></td>
+<td>O(log n)</td>
+<td>m (go through all edges)</td>
+<td>O(1)</td>
+<td>O(m log n)</td>
+<td>sparse graphs</td>
+</tr>
+</tbody>
+</table>
+<h3>Kruskall’s Algorithm</h3>
+<p>The tree here does not need to grow from the same root, but multiple trees can grow and they connect as they go. At every iteration we try to add the smallest edge to one of the growing trees. If the edge to be added (the minimum) would create a cycle, we discard it. </p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 680px; "
+    >
+      <a
+    class="gatsby-resp-image-link"
+    href="/static/970a65b5449d4e87be3ace265e4a5982/807a0/8c0e95340ed051216a58bd9d950b0328084360fd.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+    <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 84.70588235294117%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAAB6klEQVQ4y2WT63LjIAyFef/367/O7uy0u72kteM7xmAtn2wR0jBDCDroWJcjJ3nt+y7ee4kxii1srG3bZJomSSmpzeyGLctyZ3PruirAyYYYZzaPwfhQCEHv2LnzDptt83N93xcDJ6QAEA3DoP/HcSykRMOJjTfzPOvJXQlJx6IDMCdAI+y6Tj/IZkEOxglG5PCcKR9RAUJooVuN1ClngZ271dd8+grD7s4WSFh9fuRLgW+F3nMEpBWK/fYmyZwjqzHHTzNG+bgG+epzuieJOfVzxrpNLn0uR7x9JKbD718TFCuEbTa+t0FevlZ5/Q53ZCmffy6r/PpY5fdnrnG8yWNYktqf3728tVWEKUFwXFKVbklLHjGpbPsPm7sJe9EO/3Si+NM0FtHfi/sYCN7cCRsiZGCgESMFZHG9XotsjNhk1TRN7vSg0gF3GG0K2CZaFmQ2ethtCFh8GF9w3oFxOpRuI4fRiLXD+Q7Wtm3JwiK06bCJOkoz0ZRUJqU7I6idzMGcTfTUkQ/Hc5L4z5A4K6amPU9nX6U6RQXvs7jrrpfGqLjzHMdDi84AhPr3O4ft00M3w5ZUwEtIlQoOfMx6bMcg3RSVQyO8dCEL18vTqxeEXjt99lGe3xZ5evHSzelBVpc8RQSCuNdtl/9hGDXm+4H3mQAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="8c0e95340ed051216a58bd9d950b0328084360fd.png"
+        title="8c0e95340ed051216a58bd9d950b0328084360fd.png"
+        src="/static/970a65b5449d4e87be3ace265e4a5982/c5bb3/8c0e95340ed051216a58bd9d950b0328084360fd.png"
+        srcset="/static/970a65b5449d4e87be3ace265e4a5982/04472/8c0e95340ed051216a58bd9d950b0328084360fd.png 170w,
+/static/970a65b5449d4e87be3ace265e4a5982/9f933/8c0e95340ed051216a58bd9d950b0328084360fd.png 340w,
+/static/970a65b5449d4e87be3ace265e4a5982/c5bb3/8c0e95340ed051216a58bd9d950b0328084360fd.png 680w,
+/static/970a65b5449d4e87be3ace265e4a5982/b12f7/8c0e95340ed051216a58bd9d950b0328084360fd.png 1020w,
+/static/970a65b5449d4e87be3ace265e4a5982/b5a09/8c0e95340ed051216a58bd9d950b0328084360fd.png 1360w,
+/static/970a65b5449d4e87be3ace265e4a5982/807a0/8c0e95340ed051216a58bd9d950b0328084360fd.png 1652w"
+        sizes="(max-width: 680px) 100vw, 680px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+  </a>
+    </span></p>
+<ul>
+<li>We have to go through all edges from smallest to largest. Thus, we need to sort them. This will take <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m\log m)"></img> (as for example using the heap sort algorithm). Since <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?m"></img> is at most <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?n^2"></img> it follows that <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(\log (n^2)) = O(2 \log n) = O(\log n) "></img> and therefore this will take <img class="inline-equation-image" src="https://latex.codecogs.com/svg.latex?O(m\log n)"></img>. </li>
+<li>Once we choose an edge, we need to ask the question whether the new edge to add to the tree creates a cycle. We can store the currently found tree into separate sets.  We can store nodes in a data structure, where each node alone is a trivial 1-element tree. As we add an edge between two nodes belonging to two different sets, we have to find the nodes (find to which set they belong) and then the two sets become a new set given by the sum of the two (union). The data structure storing this sets and supporting the union and find operations is called Union-Find. If x and y are in the same set, then they create a cycle, otherwise they do not. </li>
+</ul></div></article><style data-emotion-css="pb8g3h">.css-pb8g3h{margin-top:1.44rem;}</style><div class="css-pb8g3h"></div></main><style data-emotion-css="1dvd3xe">.css-1dvd3xe{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-top:4.32rem;margin-bottom:4.32rem;}</style><nav class="css-1dvd3xe"><div><a rel="prev" style="margin-right:20px" href="/blog/hash-table/">← <!-- -->Hash Table</a></div><div><a rel="next" href="/blog/encoding/">Encoding<!-- --> →</a></div></nav><div id="utterances_container" class="[object Object]"></div></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script>
+  
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-178749604-1', 'auto', {});
+      
+      
+      
+      
+      
+      }</script><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/graphs/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f87865a503e92d56116b.js"],"app":["/app-6f89f36f070776bc93a1.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0cec4cfb54846b6048b4.js"],"component---src-pages-blog-js":["/component---src-pages-blog-js-e2c763bfdda74a6dcd0f.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-33e7a22b664ed5e8adb4.js"],"component---src-pages-index-js":["/component---src-pages-index-js-02ffbb9c611f0dd03672.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-5d843e0f744783a27f97.js"]};/*]]>*/</script><script src="/polyfill-f87865a503e92d56116b.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-5d843e0f744783a27f97.js" async=""></script><script src="/f22e65116e117537b01f54252158ffae588a680c-72964589f1e0de4f924a.js" async=""></script><script src="/commons-9e97d9eecb6827581732.js" async=""></script><script src="/styles-89fd2ae28bdf06750a71.js" async=""></script><script src="/app-6f89f36f070776bc93a1.js" async=""></script><script src="/framework-7b137f8875cbc4fb65ab.js" async=""></script><script src="/webpack-runtime-b20b537eeafb2e967a7d.js" async=""></script></body></html>
