@@ -60,7 +60,7 @@ export default function Blog({ data, location }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
       filter: { fileAbsolutePath: { regex: "/content/blog/" } }
     ) {
       edges {
