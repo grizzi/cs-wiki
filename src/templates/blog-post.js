@@ -9,16 +9,12 @@ import Utterances from "../components/Utterances"
 export default function BlogPost({ data, pageContext, location }) {
   const { previousPost, nextPost } = pageContext
   const post = data.markdownRemark
-  const image = post.frontmatter.image
-    ? post.frontmatter.image.childImageSharp.resize
-    : null
 
   return (
     <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={image}
         pathname={location.pathname}
       />
       <main
@@ -91,15 +87,6 @@ export const query = graphql`
       frontmatter {
         title
         description
-        image: featured {
-          childImageSharp {
-            resize(width: 1200, height: 630, jpegQuality: 100) {
-              src
-              height
-              width
-            }
-          }
-        }
       }
     }
   }
