@@ -164,11 +164,14 @@ async function processBlocks(pageContent, textPrefix = "") {
       }
     } else if (block.type === "divider") {
       text = `${text}---\n`
-    } else if (block.type == "equation") {
+    } else if (block.type === "equation") {
       text = `${text}${textPrefix}<div class=block-equation-container><img src="https://latex.codecogs.com/svg.latex?${block.equation.expression}"></img></div>\n\n`
     } else if (block.type == "table") {
       let table = await n2m.blockToMarkdown(block)
       text = `${text}${textPrefix}${table}\n\n`
+    } else if (block.type === "numbered_list_item") {
+      let items_list = await n2m.blockToMarkdown(block)
+      text = `${text}${textPrefix}${items_list}\n`
     } else {
       console.log("=====> Unhandled block: ", JSON.stringify(block, null, 2))
     }
@@ -197,8 +200,9 @@ async function toMarkdown(pageId, ignore) {
   // Download the cover and add it to the frontmatter.
   if (pageProps.cover !== null && pageProps.cover.type === "external") {
     const pageCoverUrl = pageProps.cover.external.url
-    const coverImageName = await downloadFile(pageCoverUrl, destPath)
-    metas.push(`featured: '${coverImageName}'`)
+    //const coverImageName = await downloadFile(pageCoverUrl, destPath)
+    //metas.push(`featured: '${coverImageName}'`)
+    metas.push(`featured: ''`)
   }
 
   const [contentText, childMetas] = await processBlocks(pageContent)
