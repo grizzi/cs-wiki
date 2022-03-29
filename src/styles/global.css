@@ -45,10 +45,6 @@ pre[class*="language-"] {
   font-feature-settings: normal;
 }
 
-p {
-  display: inline-block;
-}
-
 .block-equation-container {
   display: block; /* for base64 image placeholder */
   align-items: center;
