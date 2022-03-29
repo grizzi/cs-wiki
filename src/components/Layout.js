@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
-import DarkModeToggler from "./DarkModeToggler"
+// import DarkModeToggler from "./DarkModeToggler"
 import ClientOnly from "./ClientOnly"
 
 const isActive = propsIfActive => ({ isPartiallyCurrent, href, location }) => {
@@ -120,7 +120,7 @@ export default function Layout({ children }) {
             `}
           >
             <MenuLink to="/">About Me</MenuLink>
-            <MenuLink to="/blog/">Blog</MenuLink>
+            <MenuLink to="/blog/">Wiki</MenuLink>
             <MenuLink to="/contact/">Socials</MenuLink>
           </nav>
         </div>
@@ -141,7 +141,7 @@ export default function Layout({ children }) {
               height: 24px;
             `}
           >
-            <DarkModeToggler />
+            {/* <DarkModeToggler /> */}
           </ClientOnly>
         </div>
       </header>
