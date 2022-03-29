@@ -44,3 +44,18 @@ pre[class*="language-"] {
   font-variant-ligatures: none;
   font-feature-settings: normal;
 }
+
+p {
+  display: inline-block;
+}
+
+.block-equation-container {
+  display: block; /* for base64 image placeholder */
+  align-items: center;
+  text-align: center;
+}
+
+.inline-equation-image {
+  vertical-align: middle;
+  margin-bottom: 0;
+}
